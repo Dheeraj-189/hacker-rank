@@ -1,0 +1,21 @@
+ import math
+import os
+import random
+import re
+import sys
+from collections import Counter
+
+s = input().strip()
+
+# Count character frequencies
+counts = Counter(s)
+sorted_chars = sorted(counts.items(), key=lambda x: (-x[1], x[0]))
+
+# Print top three
+for char, count in sorted_chars[:3]:
+    print(char, count)
+
+
+
+
+
